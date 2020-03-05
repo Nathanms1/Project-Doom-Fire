@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Doom Fire Effect</title>
+    <style>
+      body {
+        background-color: #FE9A2E;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+      }
+
+      h1 {
+        font-family: impact;
+        margin: 0;
+        font-size: 50px;
+        text-shadow: 0px -1px 0px rgba(255,225,31,0.4);
+      }
+
+      #fireCanvas {
+        margin: 30px;
+      }
+
+      table {
+        border-collapse: collapse;
+        border: 1px solid #000;
+      }
+
+      td {
+        width: 32px;
+        height: 32px;
+        color: #FFF;
+        border: 1px solid #000;
+        text-align: center;
+        vertical-align: center;
+        font-family: arial;
+        font-size: 10px;
+        position: relative;
+        font-weight: bold;
+      }
+
+      td.pixel {
+        width: 4px;
+        height: 4px;
+        border: 0;
+      }
+
+      .pixel-index {
+        font-size: 7px;
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        color: #927450;
+      }
+
+      a {
+        color: #FFF;
+        font-size: 10px;
+        font-family: arial;
+      }
+
+      .margin {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <center>
+      <h1>Efeito de fogo Doom</h1>
+      <h2>Por: Nathan Maria da Silva</h2>
+      <a href="https://github.com/Nathanms1">https://github.com/Nathanms1</a>
+      <div id="fireCanvas"></div>
+      <div class="margin">
+        <button onclick="decreaseFireSource()">-</button>
+        <button onclick="destroyFireSource()">Fogo menor</button>
+        <button onclick="createFireSource()">Fogo maior</button>
+        <button onclick="increaseFireSource()">+</button>
+      </div>
+      <div class="margin">
+        <button 
+        onclick="toggleDebugMode()">Alterar modo de depuração</button>
+      </div>
+      <div class="margin">
+        <span> Mude o Vento <br>&#128071</br> </span>
+      </div>
+      <div class="margin">
+        <button onclick="changeWindDirection(0)"> < </button>
+        <button 
+onclick="changeWindDirection(2)"> > </button></div>
+        <button
+onclick="changeWindDirection(1)"> Sem chuva </button></div>
+    </center>
+
+    <script src="fire.js"></script>
+
+  </body>
+</html>
